@@ -2,7 +2,7 @@ import "./Css/getintouch.css"
 import Link from "next/link";
 export default function Button() {
     return (
-        <div className="flex justify-center translate-y-[-14em] items-center flex-col">
+        <div className="flex translate-y-[-14em] translate-x-[17em] flex-col">
             <button className="button1">
                 <span>Socials</span>
                 <div className="container1">
