@@ -20,8 +20,7 @@ export default function Text() {
         }}
         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold  text-white dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
       >
-        Hi! I'm {" "}
-        
+        Hi! I&apos;m {" "}
         <Highlight className="text-gray-900 dark:text-white">
           Asif Foisal
         </Highlight>
