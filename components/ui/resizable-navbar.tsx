@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
-import  {IconMenu2, IconX}  from "@tabler/icons-react";
+import { IconMenu2, IconX } from "@tabler/icons-react";
+import "../../app/globals.css";
 import {
   motion,
   AnimatePresence,
@@ -26,6 +27,7 @@ interface NavItemsProps {
   items: {
     name: string;
     link: string;
+    onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   }[];
   className?: string;
   onItemClick?: () => void;
@@ -74,9 +76,9 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(
-              child as React.ReactElement<{ visible?: boolean }>,
-              { visible },
-            )
+            child as React.ReactElement<{ visible?: boolean }>,
+            { visible },
+          )
           : child,
       )}
     </motion.div>
@@ -103,7 +105,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl border border-[#222] mt-4 flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl border border-[#796d6d] mt-4 flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className,
       )}
@@ -127,7 +129,10 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       {items.map((item, idx) => (
         <a
           onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
+          onClick={(e) => {
+            if (item.onClick) item.onClick(e);
+            if (onItemClick) onItemClick();
+          }}
           className="relative px-4 py-2 text-[#EAEAEA] dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}
@@ -236,7 +241,7 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      
+
       <span className="font-medium text-[#EAEAEA] dark:text-white">Asif Foisal</span>
     </a>
   );
@@ -256,9 +261,9 @@ export const NavbarButton = ({
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
 } & (
-  | React.ComponentPropsWithoutRef<"a">
-  | React.ComponentPropsWithoutRef<"button">
-)) => {
+    | React.ComponentPropsWithoutRef<"a">
+    | React.ComponentPropsWithoutRef<"button">
+  )) => {
   const baseStyles =
     "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 

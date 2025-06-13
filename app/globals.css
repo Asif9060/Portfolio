@@ -118,8 +118,24 @@
    }
    body {
       @apply bg-background text-foreground;
+      
+   }
+   html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px; /* Adjust this value based on your navbar height */
    }
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 
 .bgDecorate::after {
    content: "";

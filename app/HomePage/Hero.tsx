@@ -8,7 +8,7 @@ import profile from '../../public/profile.jpg'
 export default function Hero() {
   return (
     <div>
-      <div className='overflow-hidden'>
+      <div id="home" className='overflow-hidden'>
         <Image src={bg} alt="Hero" className="absolute -z-1" />
         <div className='bgDecorate'>
           <p className="text-2xl z-50 md:text-4xl lg:text-7xl text-white translate-x-[16rem] font-bold inter-var">

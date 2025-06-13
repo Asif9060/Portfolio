@@ -3,14 +3,18 @@
 import Nav from '../app/HomePage/Nav';
 import Hero from '../app/HomePage/Hero';
 import SkillsShowcase from '@/components/SkillsShowcase';
-// import ProjectsShowcase from './HomePage/ProjectsShowcase';
+import ProjectShowcase from './HomePage/ProjectsShowcase';
+import Contact from './HomePage/Contact';
+import Footer from './HomePage/Footer';
 export default function Home() {
   return (
-    <div className=''>
+    <div className='scroll'>
       <Nav></Nav>
       <Hero></Hero>
       <SkillsShowcase></SkillsShowcase>
-      {/* <ProjectsShowcase></ProjectsShowcase> */}
+      <ProjectShowcase />
+      <Contact></Contact>
+      <Footer></Footer>
       
 
     </div>
