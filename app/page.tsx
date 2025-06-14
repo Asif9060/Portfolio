@@ -6,10 +6,12 @@ import SkillsShowcase from '@/components/SkillsShowcase';
 import ProjectShowcase from './HomePage/ProjectsShowcase';
 import Contact from './HomePage/Contact';
 import Footer from './HomePage/Footer';
+import MobileHero from './HomePage/MobileHero';
 export default function Home() {
   return (
     <div className='scroll'>
       <Nav></Nav>
+      <MobileHero></MobileHero>
       <Hero></Hero>
       <SkillsShowcase></SkillsShowcase>
       <ProjectShowcase />

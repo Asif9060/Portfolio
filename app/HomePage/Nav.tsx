@@ -87,7 +87,7 @@ export default function Nav() {
                 if (item.onClick) item.onClick(e);
                 setIsMobileMenuOpen(false);
               }}
-              className="relative text-neutral-600 dark:text-neutral-300"
+              className="relative text-white dark:text-neutral-300"
             >
               <span className="block">{item.name}</span>
             </a>
@@ -96,17 +96,17 @@ export default function Nav() {
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
-                className="w-full"
+                className="w-full bg-[#FF007F] text-[#EAEAEA]"
               >
-                Login
+                Download CV
               </NavbarButton>
-              <NavbarButton
+              {/* <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
               >
                 Book a call
-              </NavbarButton>
+              </NavbarButton> */}
             </div>
           </MobileNavMenu>
         </MobileNav>

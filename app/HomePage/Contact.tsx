@@ -72,17 +72,13 @@ export default function ContactForm() {
   ];
 
   return (
-    <div className="min-h-screen translate-y-[10em] bg-black py-12 px-4 sm:px-6 lg:px-8">
+    <div id="contact" className="min-h-screen translate-y-[10em] bg-black py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="bg-gray-900 rounded-3xl shadow-2xl overflow-hidden border border-gray-800">
           <div className="grid md:grid-cols-5 gap-0">
             {/* Left Panel - Contact Info */}
             <div className="md:col-span-2 bg-gradient-to-br from-purple-600 to-pink-600 p-8 lg:p-12 text-white relative overflow-hidden">
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-              </div>
+              
               
               <div className="relative z-10">
                 <h2 className="text-3xl font-bold mb-4">Let's create something amazing</h2>
@@ -363,12 +359,12 @@ export default function ContactForm() {
         </div>
 
         {/* Optional: Floating gradient orbs for extra visual interest */}
-        <div className="fixed top-20 left-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        {/* <div className="fixed top-20 left-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div className="fixed top-40 right-10 w-72 h-72 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
         <div className="fixed bottom-20 left-1/2 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
+      </div> */}
 
-      <style jsx>{`
+      {/* <style jsx>{`
         @keyframes blob {
           0% {
             transform: translate(0px, 0px) scale(1);
@@ -392,7 +388,8 @@ export default function ContactForm() {
         .animation-delay-4000 {
           animation-delay: 4s;
         }
-      `}</style>
+      `}</style> */}
+    </div>
     </div>
   );
 }
