@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <div className='container'>
       <div id="home" className='overflow-hidden'>
-        <Image src={bg} alt="Hero" className="absolute blur-xl -z-1" />
+        <Image src={bg} alt="Hero" className="absolute brightness-75 blur-xl -z-1" />
         
         <div className='translate-y-[5rem] me'>
           <p className="text-2xl z-50 md:text-4xl lg:text-7xl text-white translate-x-[16rem] txt font-bold inter-var">

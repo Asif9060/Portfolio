@@ -3,7 +3,7 @@ import { skillCategories } from '@/data/portfolioSkills';
 import SkillCategory from './SkillCategory';
 
 const SkillsShowcase: React.FC = () => {
-  return (<div id="skills" className="min-h-screen translate-y-[11em] bg-black py-20 px-4">
+  return (<div id="skills" className="min-h-screen translate-y-[11em] bg-[#052244] py-20 px-4">
     <div className="max-w-7xl mx-auto">
       {/* Header Section */}
       <div className="text-center mb-16 space-y-4">

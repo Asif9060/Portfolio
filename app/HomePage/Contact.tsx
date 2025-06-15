@@ -72,7 +72,7 @@ export default function ContactForm() {
   ];
 
   return (
-    <div id="contact" className="min-h-screen translate-y-[10em] bg-black py-12 px-4 sm:px-6 lg:px-8">
+    <div id="contact" className="min-h-screen translate-y-[10em] bg-gray-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="bg-gray-900 rounded-3xl shadow-2xl overflow-hidden border border-gray-800">
           <div className="grid md:grid-cols-5 gap-0">
